@@ -1,0 +1,254 @@
+$dark-turq: #649e8c;
+$dark-pink: #ff849c;
+$dark-pink-dark: #8d3c4d;
+$dark-pink-darktheme: lighten($dark-pink, 10%);
+$footer-darktheme: #4f272f;
+$light-pink: rgba(255, 183, 197, 0.7);
+$bold: 600;
+$gold: #d8c690;
+$border-turq: #21827e;
+$darktheme-background: rgba(46, 46, 45, 0.7);
+$background: rgba(255, 234, 238, 0.7);
+$text-dark-theme: #E8E4E0;
+$text-light-theme: #2a3636;
+
+$lightTheme: true;
+
+%lightOrDark{
+  @if $lightTheme {
+    background-color: $background;
+    color: $text-light-theme;
+  } else {
+    color: $text-dark-theme;         
+    background-color: $darktheme-background;
+  }
+}
+
+@media(prefers-color-scheme: dark){
+  body{
+    color: $text-dark-theme;         
+    background-color: $darktheme-background;
+  }
+}
+/*ANIMERINGSSIDA*/
+.animation-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+
+  .sub-head{
+    text-align: center;
+    background-color: $gold;
+    padding: 5%;
+    color: white;
+    text-shadow: -1px 1px 0 darken($gold, 20%),
+    2px 2px 0 darken($gold, 20%),
+    2px -2px 0 darken($gold, 20%),
+    -1px -1px 0 darken($gold, 20%);
+  }
+  
+  .img-container{
+    position: relative;
+    text-align: center;
+    margin: 15px;
+        
+  }
+
+  %image-{
+    border: 4px solid #21827e;
+    width: 300px;
+    height: auto;   
+    margin: 2% 
+  }
+
+  .img-animation {
+    @extend %image-;
+    border-color: $gold;
+  }
+
+  @keyframes oldPhoto{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+        
+    } 
+  }
+
+  @keyframes photoText{
+    0%, 100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        
+    }  
+  }
+
+  .img-animation{
+    animation-name: oldPhoto;    
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  } 
+
+  .img-container p{
+    animation-name: photoText;    
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    font-weight: $bold;
+    bottom: 110px;
+    left: 30px;
+    border: $gold 2px solid;
+    padding: 3%;
+  }
+
+  @keyframes moving-left{
+    0%{left: 0; top: 0px;}
+    25%{left: 50%; top:0px;}
+    50%{left: 100%; top: 0px;}
+    75%{left: 50%; top: 0px;}
+    100%{left: 0; top: 0px;}
+  }
+
+  @keyframes moving-right{
+    0%{left: 100%; top: 0px;}
+    25%{left: 50%; top:0px;}
+    50%{left: 0; top: 0px;}
+    75%{left: 50%; top: 0px;}
+    100%{left: 100%; top: 0px;}
+  }
+
+  #moving-object-one{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    background-color: $gold;
+    animation-name: moving-right;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+  
+#moving-object-two{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    background-color: $gold;
+    animation-name: moving-left;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@media screen and (max-width: 699px) {
+  .animation-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    //align-content: center;
+  }
+
+  .img-container{
+    position: relative;        
+    margin: auto;
+    display: flex;      
+    flex-direction: column;      
+    align-content: center;
+    margin: 0;
+  }  
+
+  %image-{
+    border: 4px solid #21827e;
+    max-width: 100%;
+    width: auto;
+    height: auto;   
+    margin: 15px auto;
+  }
+
+  .img-animation {
+    @extend %image-;
+    border-color: $gold;
+  }
+
+  @keyframes oldPhoto{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+        
+    } 
+  }
+
+  @keyframes photoText{
+    0%, 100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        
+    }  
+  }
+
+  .img-animation{
+    animation-name: oldPhoto;    
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+
+  .img-container p{
+    position: absolute;
+    bottom: 110px;
+    left: 30px;
+    animation-name: photoText;    
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes moving-left{
+    0%{left: 0; top: 0px;}
+    25%{left: 50%; top:0px;}
+    50%{left: 100%; top: 0px;}
+    75%{left: 50%; top: 0px;}
+    100%{left: 0; top: 0px;}
+  }
+
+  @keyframes moving-right{
+    0%{left: 100%; top: 0px;}
+    25%{left: 50%; top:0px;}
+    50%{left: 0; top: 0px;}
+    75%{left: 50%; top: 0px;}
+    100%{left: 100%; top: 0px;}
+  }
+
+  #moving-object-one{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    background-color: $gold;
+    animation-name: moving-right;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+  
+#moving-object-two{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    background-color: $gold;
+    animation-name: moving-left;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+}

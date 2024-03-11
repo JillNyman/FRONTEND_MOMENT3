@@ -1,0 +1,319 @@
+$dark-turq: #649e8c;
+$dark-pink: #ff849c;
+$dark-pink-dark: #8d3c4d;
+$dark-pink-darktheme: lighten($dark-pink, 10%);
+$footer-darktheme: #4f272f;
+$light-pink: rgba(255, 183, 197, 0.9);
+$bold: 600;
+$gold: #d8c690;
+$border-turq: #21827e;
+$darktheme-background: rgba(46, 46, 45, 0.7);
+$background: rgba(255, 234, 238, 0.7);
+$text-dark-theme: #E8E4E0;
+$text-light-theme: #2a3636;
+
+header{
+  width: 65%;
+  max-width: 65%;
+  height: 20%;
+  border: 10px solid;
+  border-color: $dark-pink;    
+  padding: 3% 15%;    
+  margin: 5% auto;  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+header h1{
+  display: block;
+  text-align: center;
+  font-weight: 800;
+  font-size: 40px;
+  color: $light-pink;
+  text-shadow: -1px 1px 0 $dark-pink-dark,
+  2px 2px 0 $dark-pink-dark;  
+  top: 2%;
+}
+
+/*UTSEENDE PÅ LÄNKAR OCH OLIKA EFFEKTER*/
+a:link {
+color: black;
+text-decoration: none;
+}
+
+a:visited {
+color: rgb(42, 41, 41);
+text-decoration: none;
+}
+
+a:hover {
+color: #686866;
+text-decoration: underline;
+}
+
+/*FOOTER*/
+.bottommenu {
+float: left;
+width: 20%;
+padding: 10px;
+line-height: 1;
+padding-left: 20px;
+margin-left: 20px;
+}
+
+.footer {
+background-color: $light-pink;
+height: 150px;
+}
+
+/* Meny */
+nav {
+    background-color: $light-pink;
+    font-size: 1.4em;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    display: hidden;
+    font-weight: $bold;
+    z-index: 1;
+    box-shadow: -5px 3px 2px darken($light-pink, 2%);  
+  
+  
+  ul {
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+    margin: 0 0 0 auto;
+    padding: 0;
+  }
+  
+  li {
+    padding: 0.8em 0;   
+    color: $text-light-theme; 
+  }
+
+  li:hover{
+    background-color: $dark-pink;
+    color: white;
+    cursor: pointer;
+  }
+
+  li:visited{
+    font-style: italic;
+    color: black;
+  }
+  
+  a {    
+    text-decoration: none;
+    padding: 0 1em;
+  }
+
+  a:visited{
+    color: black;
+    font-style: italic;
+  }
+
+}
+  
+  /*Meny-knapp, öppnameny*/
+  .menu-btn {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: $dark-pink;  
+    color: $text-light-theme;
+    border: lighten($dark-pink, 5%) solid 2px;
+    cursor: pointer;
+    font-weight: 600;
+    width: auto;
+    border-radius: 15px;
+    
+  }
+  
+  .open {
+    margin-right: -14%;
+    margin-left: auto;
+    margin-top: -3%;
+    width: 150px;
+    padding: auto;
+    display: block;
+  }
+
+  .close{
+    margin-top: 5%;
+    margin-left: 2%;
+  }
+  
+  .menu-btn:hover, .menu-text:hover {
+    background-color: $light-pink;
+    color: white;
+    border: lighten($dark-pink, 20%);
+  }
+
+  @keyframes btnEffect{
+    50%{
+      
+      font-size: 32px;
+      font-weight: 800;
+      min-height: 100px;
+      padding: 16px 24px;
+      text-align: center;
+      width: 50%;
+    
+    }
+    }    
+    #open-menu:active {
+    animation-name: btnEffect;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    }
+
+  /*INDEX - INNEHÅLL*/
+.flexbox1 {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-weight: bold;
+    width: 80%;
+    margin: 50px 10%;
+  } 
+
+@mixin box($color){
+    flex-basis: 100%;
+    width: 200px;
+    height: 100px;
+    font-size: 32px;
+    padding-top: 50px;
+    text-align: center;
+    border-radius: 5%;
+    margin: 30px 30px;
+    background-color: $color;
+  }
+
+  #mainstart1 {
+    @include box($dark-pink); 
+  }  
+ 
+#mainstart2 {
+    @include box($dark-turq);
+     
+  }  
+  
+  #mainstart3 {
+    @include box($gold);  
+  }
+
+  @keyframes rotateSquare{
+    0%{
+      transform: rotateY(0deg);
+    }
+
+    50%{
+      transform: rotateY(180deg);
+    }
+
+    100%{
+      transform: rotateY(360deg);
+    }
+  }
+
+  #mainstart2:hover, #mainstart1:hover, #mainstart3:hover{
+    animation-name: rotateSquare;
+    animation-duration: 1.5s;
+    animation-delay: 0.3s;
+    animation-iteration-count: 1;
+    opacity: 0.7;
+  }
+
+  /*MOBILSTORLEK*/
+@media screen and (max-width: 699px) {
+  header {
+    display: block;
+    margin: 0 0;
+    padding: 0 0;
+    width: 95%;
+    max-width: 95%;
+    height: 200px;
+    align-items: center;
+    padding-bottom: 45px;  
+  }
+
+  header h1{
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 12%;
+  }
+
+  .open {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3%;
+    width: 150px;
+    padding: auto;
+    display: block;
+  }
+  
+  /*INDEX*/
+  .flexbox1 {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+
+  @mixin box($color){
+    width: 100%;
+    height: 80px;
+    font-size: 32px;
+    padding-top: 50px;
+    text-align: center;
+    margin: 30px 0;
+    background-color: $color;
+    border-radius: 0;
+  }
+  
+  #mainstart1 {
+    @include box($dark-pink);
+    
+  }
+  
+  #mainstart2 {
+    @include box($dark-turq);
+  }
+  
+  #mainstart3 {
+    @include box($gold);
+  }
+  
+  /*FOOTER*/
+  .footer {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0 0 0;
+    height: 150px;
+    text-align: center;
+  }
+  
+  .bottommenu {
+    float: none;
+    width: 100%;    
+    padding: 0px 0px;
+    font-size: 12px;
+  }
+  
+
+  
+  #flexbox1 {
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+  }
+  

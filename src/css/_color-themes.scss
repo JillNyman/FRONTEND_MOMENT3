@@ -1,0 +1,115 @@
+$dark-turq: #649e8c;
+$dark-pink: #ff849c;
+$dark-pink-dark: #8d3c4d;
+$dark-pink-darktheme: lighten($dark-pink, 10%);
+$footer-darktheme: #4f272f;
+$light-pink: rgba(255, 183, 197, 0.7);
+$bold: 600;
+$gold: #d8c690;
+$border-turq: #21827e;
+$darktheme-background: rgba(35, 35, 33, 0.7);
+$background: rgba(255, 234, 238, 0.7);
+$text-dark-theme: #E8E4E0;
+$text-light-theme: #2a3636;
+
+
+
+$lightTheme: true;
+
+%lightOrDark{
+  @if $lightTheme {
+    background-color: $background;
+    color: $text-light-theme;
+  } else {
+    color: $text-dark-theme;         
+    background-color: $darktheme-background;
+  }
+}
+
+@media(prefers-color-scheme: dark){
+  body{
+    color: #E8E4E0;//$text-dark-theme;         
+    background-color: rgba(46, 46, 45, 0.7);//$darktheme-background;
+  }
+}
+
+
+
+
+// use colors
+
+
+        // ------------------------
+// actual CSS for toggle
+// ------------------------
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 68px;
+    height: 38px;
+    margin: 5px;
+  }
+  
+  // hide checkbox
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  // outside
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: grey;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  @keyframes going-dark {
+    100% {
+      -webkit-transform: translateX(28px);
+    }
+  }
+  
+  @keyframes going-light {
+    0% {
+      -webkit-transform: translateX(28px);
+    }
+    100% {
+      -webkit-transform: translateX(0px);
+    }
+  }
+  
+  // slider in light state
+  .slider:before {
+    position: absolute;
+    content: '';
+    height: 24px;
+    width: 24px;
+    left: 8px;
+    bottom: 7px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-animation: going-light 0.4s cubic-bezier(0.57, 1.52, 0.64, 1) normal;
+    -webkit-transition: 0.4s;
+    animation: going-light 0.4s cubic-bezier(0.57, 1.52, 0.64, 1) normal;
+    transition: 0.4s;
+  }
+  
+  // slider in dark state
+  input:checked + .slider:before {
+    background-color: white;
+    -webkit-animation: going-dark 0.4s cubic-bezier(0.57, 1.52, 0.64, 1) forwards;
+    -webkit-transition: all 0.4s;
+    animation: going-dark 0.4s cubic-bezier(0.57, 1.52, 0.64, 1) forwards;
+    transition: all 0.4s;
+    
+  }

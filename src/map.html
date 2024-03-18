@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    
+
+
+    <link rel="stylesheet" href="css/main.scss">
+<script type="module" src="js/index.js"></script>
+<script type="module" src="js/map.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>KARTA</h1>
+        <button class="menu-btn open" id="open-menu">
+            <span class="menu-text">MENY</span>
+          </button>
+          
+          <nav id="nav-menu">
+            
+            <button class="menu-btn close" id="close-menu">
+             
+              <span class="menu-text">STÄNG</span>
+            </button>
+            <ul>
+              <li><a href="index.html">STARTSIDA</a></li>
+              <li><a href="SASS.html">SASS</a></li>
+              <li><a href="animation.html">ANIMERING</a></li>
+              <li><a href="diagram.html">DIAGRAM</a></li>
+              <li><a href="map.html">KARTA</a></li>
+            </ul>
+          </nav>   
+    </header>
+    
+   
+
+    <div class="place-autocomplete-card" id="place-autocomplete-card">
+      <p>Sök:</p>
+    </div>
+    <div id="map"></div>
+
+
+    <footer class="footer">
+        <div class="bottommenu">
+          <a href="diagram.html"
+            ><p><b>Diagram</b></p></a
+          >
+          <a href="map.html"
+            ><p><b>Karta</b></p></a
+          >
+          <a href="animation.html"
+            ><p><b>Animation</b></p></a
+          >
+        </div>
+        <div class="bottommenu">
+          
+          <p><b>Copyright 2024</b></p>
+        </div>
+        
+      </footer>
+      
+     
+     <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+      ({key: "AIzaSyDsWFV3gP_KsJho0-5KmhW7P3HQaS4T8B8", v: "beta"});</script> 
+</body>
+</html>

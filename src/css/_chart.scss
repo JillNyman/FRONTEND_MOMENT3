@@ -1,0 +1,58 @@
+$dark-turq: #649e8c;
+$dark-pink: #ff849c;
+$light-pink: #ffb7c5;
+$bold: 600;
+$gold: #d8c690;
+$border-turq: #21827e;
+$darktheme-background: #2e2e2d;
+
+/*.chart{
+    opacity: 1;
+    color: black;
+    margin: 30px auto;
+    
+}*/
+
+.chart-header{
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+#myChart{
+    width: auto;
+    max-width: 800px;
+    max-height: 700px;
+}
+
+#myChart2{
+    max-width: 80%;
+    height: auto;
+}
+
+@media screen and (max-width: 649px){
+    #myChart{
+        max-width: 500px;
+    }
+
+    #myChart2{
+        max-width: 400px;
+        max-height: 400px;
+    }
+}
+
+@media screen and (max-width: 529px){
+    #myChart{
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    #myChart2{
+        max-width: 350px;
+        max-height: 350px;
+    }
+}
+

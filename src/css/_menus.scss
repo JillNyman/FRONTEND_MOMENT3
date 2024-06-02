@@ -1,23 +1,11 @@
-$dark-turq: #649e8c;
-$dark-pink: #ff849c;
-$dark-pink-dark: #8d3c4d;
-$dark-pink-darktheme: lighten($dark-pink, 10%);
-$footer-darktheme: #4f272f;
-$light-pink: rgba(255, 183, 197, 0.9);
-$bold: 600;
-$gold: #d8c690;
-$border-turq: #21827e;
-$darktheme-background: rgba(46, 46, 45, 0.7);
-$background: rgba(255, 234, 238, 0.7);
-$text-dark-theme: #E8E4E0;
-$text-light-theme: #2a3636;
+//Menyer
 
 header{
   width: 65%;
   max-width: 65%;
   height: 20%;
   border: 10px solid;
-  border-color: $dark-pink;    
+  border-color: var(--header-border);    
   padding: 3% 15%;    
   margin: 5% auto;  
   display: block;
@@ -30,25 +18,25 @@ header h1{
   text-align: center;
   font-weight: 800;
   font-size: 40px;
-  color: $light-pink;
-  text-shadow: -1px 1px 0 $dark-pink-dark,
-  2px 2px 0 $dark-pink-dark;  
+  color: var(--header-text);
+  text-shadow: -1px 1px 0 var(--header-border),
+  2px 2px 0 var(--header-border);  
   top: 2%;
 }
 
 /*UTSEENDE PÅ LÄNKAR OCH OLIKA EFFEKTER*/
 a:link {
-color: black;
+color: var(--color-text);
 text-decoration: none;
 }
 
 a:visited {
-color: rgb(42, 41, 41);
+color: var(--color-text);
 text-decoration: none;
 }
 
 a:hover {
-color: #686866;
+color: var(--color-text);
 text-decoration: underline;
 }
 
@@ -63,13 +51,14 @@ margin-left: 20px;
 }
 
 .footer {
-background-color: $light-pink;
+background-color: var(--footer-background);
 height: 150px;
 }
 
 /* Meny */
 nav {
-    background-color: $light-pink;
+    background-color: var(--color-background);
+    color: var(--color-text);
     font-size: 1.4em;
     position: fixed;
     right: 0;
@@ -77,9 +66,8 @@ nav {
     height: 100vh;
     width: 250px;
     display: hidden;
-    font-weight: $bold;
     z-index: 1;
-    box-shadow: -5px 3px 2px darken($light-pink, 2%);  
+    box-shadow: -5px 3px 2px var(--header-border);  
   
   
   ul {
@@ -92,18 +80,18 @@ nav {
   
   li {
     padding: 0.8em 0;   
-    color: $text-light-theme; 
+    color: var(--color-text); 
   }
 
   li:hover{
-    background-color: $dark-pink;
-    color: white;
+    background-color: var(--footer-background);
+    color: var(--color-text);
     cursor: pointer;
   }
 
   li:visited{
     font-style: italic;
-    color: black;
+    color: var(--color-text);
   }
   
   a {    
@@ -112,7 +100,7 @@ nav {
   }
 
   a:visited{
-    color: black;
+    color: var(--color-text);
     font-style: italic;
   }
 
@@ -123,20 +111,20 @@ nav {
     display: flex;
     align-items: center;
     padding: 8px 15px;
-    background-color: $dark-pink;  
-    color: $text-light-theme;
-    border: lighten($dark-pink, 5%) solid 2px;
+    background-color: var(--header-border);  
+    color: var(--color-text);
+    border: var(--header-border) solid 2px;
     cursor: pointer;
     font-weight: 600;
     width: auto;
-    border-radius: 15px;
+    border-radius: 15px;   
     
   }
   
   .open {
     margin-right: -14%;
     margin-left: auto;
-    margin-top: -3%;
+    margin-top: -12%;
     width: 150px;
     padding: auto;
     display: block;
@@ -148,23 +136,23 @@ nav {
   }
   
   .menu-btn:hover, .menu-text:hover {
-    background-color: $light-pink;
-    color: white;
-    border: lighten($dark-pink, 20%);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    border: var(--header-border);
   }
 
   @keyframes btnEffect{
-    50%{
-      
+    50%{      
       font-size: 32px;
       font-weight: 800;
       min-height: 100px;
       padding: 16px 24px;
       text-align: center;
-      width: 50%;
-    
+      width: 50%;    
     }
+
     }    
+    
     #open-menu:active {
     animation-name: btnEffect;
     animation-duration: 4s;
@@ -196,16 +184,16 @@ nav {
   }
 
   #mainstart1 {
-    @include box($dark-pink); 
+    @include box(var(--header-border)); 
   }  
  
 #mainstart2 {
-    @include box($dark-turq);
+    @include box(var(--border-turq));
      
   }  
   
   #mainstart3 {
-    @include box($gold);  
+    @include box(var(--gold-background));  
   }
 
   @keyframes rotateSquare{
@@ -281,16 +269,16 @@ nav {
   }
   
   #mainstart1 {
-    @include box($dark-pink);
+    @include box(var(--header-border));
     
   }
   
   #mainstart2 {
-    @include box($dark-turq);
+    @include box(var(--border-turq));
   }
   
   #mainstart3 {
-    @include box($gold);
+    @include box(var(--gold-background));
   }
   
   /*FOOTER*/
@@ -307,10 +295,8 @@ nav {
     width: 100%;    
     padding: 0px 0px;
     font-size: 12px;
-  }
-  
+  } 
 
-  
   #flexbox1 {
     margin-left: 0px;
     margin-bottom: 20px;

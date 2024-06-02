@@ -8,6 +8,7 @@
    
     <script type="module" src="js/acquisitions.js"></script>
     <script type="module" src="js/index.js"></script>
+    <script src="js/theme.js" type="module" ></script>
 </head>
 <body>
     <header>
@@ -32,6 +33,12 @@
             </ul>
           </nav>   
     </header>
+    <div class="wrapper">
+        
+      <label class="switch">
+      <input type="checkbox" name="theme-switch" id="switch">
+      <span class="slider"></span>
+    </label>
     <div class="chart-header">
     <h2>Kurser</h2>
     <h3>(Höstterminen 2023)</h3>
@@ -42,6 +49,7 @@
     <h3>(Höstterminen 2023)</h3>
   </div>
     <div class="chart" style="width: 600px; height: auto;"><canvas id="myChart2"></canvas></div>
+    </div>
     <footer class="footer">
         <div class="bottommenu">
           <a href="diagram.html"

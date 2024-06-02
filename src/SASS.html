@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.scss">
     <script type="module" src="js/index.js"></script>
+    <script src="js/theme.js" type="module" ></script>
 </head>
 <body>
     <header>
@@ -31,14 +32,28 @@
     
 
     </header>
+    <div class="wrapper">
+        
+      <label class="switch">
+      <input type="checkbox" name="theme-switch" id="switch">
+      <span class="slider"></span>
+    </label>
     <div class="about-pages">
         <h1>Arbetet med SASS</h1>
 
         <p>
           Att börja arbeta med SASS är både enkelt och svårt.
           Enkelt för att syntaxen inte skiljer sig särskilt mycket från CSS.
-          Det som hittills varit svårt är att hitta element eller klasser som passar för till exempel en @mixin eller inheritance.
+          Det som hittills varit svårt är att hitta element eller klasser som passar för till exempel en @mixin eller inheritance.        
+
+
         </p>
+        <p>Det är definitivt en fördel att kunna återvända variabler och att kunna nästla element som hierarkiskt ligger under ett element. Det sparar både plats och blir enklare att läsa nästlad kod. Däremot får man se upp, elementens utseende påverkas på ett sätt man inte är van vid och därför behövs en del övning.</p>
+
+        <p>SASS gör det också möjligt för utvecklaren att skapa utseenden och funktioner för användarna som inte är möjliga med vanlig CSS. En nackdel med SASS är att den behöver kompileras innan körning. Sedan är det ytterligare något man behöver lära sig, men huruvida det är till för- eller nackdel är ju individuellt.</p>
+
+        <p>Jag tror att SASS/SCSS bäst "lärs in" genom att i varje projekt använda sig av det och testa sig fram. Vill dock framföra en varningsflagg här; det finns risk för att fastna för länge! Ett tips är att titta på filmer och exempel för inspiration, möjligheterna är ju oändliga.</p>
+      </div>
       </div>
       <footer class="footer">
         <div class="bottommenu">

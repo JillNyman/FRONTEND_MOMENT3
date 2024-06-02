@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/main.scss">
 <script type="module" src="js/index.js"></script>
 <script type="module" src="js/map.js"></script>
+<script src="js/theme.js" type="module" ></script>
 
 </head>
 <body>
@@ -35,7 +36,12 @@
             </ul>
           </nav>   
     </header>
-    
+    <div class="wrapper">
+        
+      <label class="switch">
+      <input type="checkbox" name="theme-switch" id="switch">
+      <span class="slider"></span>
+    </label>
    
 
     <div class="place-autocomplete-card" id="place-autocomplete-card">
@@ -43,7 +49,7 @@
     </div>
     <div id="map"></div>
 
-
+</div>
     <footer class="footer">
         <div class="bottommenu">
           <a href="diagram.html"
@@ -60,7 +66,7 @@
           
           <p><b>Copyright 2024</b></p>
         </div>
-        
+      
       </footer>
       
      

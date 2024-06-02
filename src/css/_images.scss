@@ -1,16 +1,4 @@
-$dark-turq: #649e8c;
-$dark-pink: #ff849c;
-$dark-pink-dark: #8d3c4d;
-$dark-pink-darktheme: lighten($dark-pink, 10%);
-$footer-darktheme: #4f272f;
-$light-pink: rgba(255, 183, 197, 0.7);
-$bold: 600;
-$gold: #d8c690;
-$border-turq: #21827e;
-$darktheme-background: rgba(46, 46, 45, 0.7);
-$background: rgba(255, 234, 238, 0.7);
-$text-dark-theme: #E8E4E0;
-$text-light-theme: #2a3636;
+//Bilder
 
 .images{
   display: block;
@@ -22,7 +10,7 @@ $text-light-theme: #2a3636;
 
 /*BILDER INDEX*/
 %image-{
-    border: 4px solid #21827e;
+    border: 4px solid var(--border-turq);
     width: 300px;
     height: auto;   
     margin: 2% 
@@ -38,7 +26,7 @@ $text-light-theme: #2a3636;
   #image-two{
     @extend %image-;
     border-width: 7px;
-    border-color:  $dark-pink;
+    border-color:  var(--header-border);
 
   }
 
@@ -55,7 +43,7 @@ $text-light-theme: #2a3636;
   #image-five{
     @extend %image-;
     width: 500px;
-    border-color: #ff849c;
+    border-color: var(--header-border);
   }
 
   img{
@@ -74,7 +62,7 @@ $text-light-theme: #2a3636;
     
     /*BILDER INDEX*/
     %image-{
-        border: 4px solid #21827e;
+        border: 4px solid var(--border-turq);
         max-width: 100%;
         height: auto;   
         margin: 10px auto; 
@@ -89,7 +77,7 @@ $text-light-theme: #2a3636;
       #image-two{
         @extend %image-;
         border-width: 7px;
-        border-color:  $dark-pink;    
+        border-color:  var(--header-border);    
       }
     
       #image-three{
@@ -105,7 +93,7 @@ $text-light-theme: #2a3636;
       #image-five{
         @extend %image-;
         width: 500px;
-        border-color: #ff849c;
+        border-color: var(--header-border);
       }
     
       img{

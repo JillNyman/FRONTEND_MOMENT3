@@ -4,12 +4,7 @@
     width: 70%;
     margin: 5% 15%;  
   }
-     
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-   }  
+
   
   #infowindow-content .title {
     font-weight: bold;
@@ -33,7 +28,7 @@
     font-size: large;
     font-weight: bold;
   }
-  
+
   gmp-place-autocomplete {
     width: 300px;
   }

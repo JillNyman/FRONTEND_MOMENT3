@@ -1,3 +1,5 @@
+@forward "variables";
+
 @use "menus";
 @use "images";
 @use "chart";
@@ -6,14 +8,4 @@
 @use "map";
 
 
-.about-pages{
-  width: 60%;
-  margin: 7% 20%;  
-  border: var(--border-turq) 4px solid;
-  background-color: var(--gold-background);
-  padding: 5%;
-}
 
-.about-pages h1{
-  text-align: center;
-}

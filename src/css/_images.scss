@@ -1,5 +1,4 @@
 //Bilder
-
 .images{
   display: block;
   width: 80%;
@@ -9,7 +8,7 @@
 }  
 
 /*BILDER INDEX*/
-%image-{
+@mixin image{
     border: 4px solid var(--border-turq);
     width: 300px;
     height: auto;   
@@ -17,31 +16,31 @@
   }
 
   #image-one{
-    @extend %image-;
+    @include image;
     width: 800px;
     height: auto;
     
   }
 
   #image-two{
-    @extend %image-;
+    @include image;
     border-width: 7px;
     border-color:  var(--header-border);
 
   }
 
   #image-three{
-    @extend %image-;
+    @include image;
     border-width: 8px;
   }
 
   #image-four{
-    @extend %image-;
+    @include image;
     width: 500px;
   }
 
   #image-five{
-    @extend %image-;
+    @include image;
     width: 500px;
     border-color: var(--header-border);
   }
@@ -61,7 +60,7 @@
     }  
     
     /*BILDER INDEX*/
-    %image-{
+    @mixin image{
         border: 4px solid var(--border-turq);
         max-width: 100%;
         height: auto;   
@@ -69,29 +68,29 @@
       }
     
       #image-one{
-        @extend %image-;
+        @include image;
         width: 800px;
         height: auto;        
       }
     
       #image-two{
-        @extend %image-;
+        @include image;
         border-width: 7px;
         border-color:  var(--header-border);    
       }
     
       #image-three{
-        @extend %image-;
+        @include image;
         border-width: 8px;
       }
     
       #image-four{
-        @extend %image-;
+        @include image;
         width: 500px;
       }
     
       #image-five{
-        @extend %image-;
+        @include image;
         width: 500px;
         border-color: var(--header-border);
       }
@@ -101,8 +100,5 @@
         height: 100%;
       }
   }
- 
-
-
 
   

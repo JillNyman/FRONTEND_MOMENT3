@@ -8,3 +8,4 @@ Skapat med node js.
 
 Följande paket används:
 parcel, scss, chart.js, sharp, googlemaps/js-api-loader
+

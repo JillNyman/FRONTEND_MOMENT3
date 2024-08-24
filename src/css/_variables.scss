@@ -1,0 +1,43 @@
+$dark-turq: #649e8c;
+$dark-pink: #ff849c;
+$light-pink: rgba(255, 183, 197, 0.7);
+$text-light-theme: #2a3636;
+
+$dark-pink-dark: #8d3c4d;
+$dark-pink-darktheme: lighten($dark-pink, 10%);
+$footer-darktheme: #4f272f;
+$darktheme-background: rgba(35, 35, 33, 0.9);
+$text-dark-theme: #E8E4E0;
+
+$bold: 600;
+$gold: #d8c690;
+$dark-gold: darken($gold, 40%);
+$border-turq: #21827e;
+$border-turq-darkmode: lighten($border-turq, 20%);
+$background: rgba(255, 234, 238, 0.7);
+
+//ljust tema
+@media (prefers-color-scheme: light){
+    :root {
+      --color-text: #{$text-light-theme};
+      --color-background: #{$background};
+      --header-border: #{$dark-pink};
+      --header-text: #{$light-pink};
+      --gold-background: #{$gold};
+      --footer-background: #{$light-pink};
+      --border-turq: #{$border-turq};
+    }
+  }
+  
+  //mörkt tema
+  @media (prefers-color-scheme: dark){
+    :root {
+      --color-text: #{$text-dark-theme};
+      --color-background: #{$darktheme-background};
+      --header-border: #{$dark-pink-dark};
+      --header-text: #{$text-dark-theme};
+      --gold-background: #{$dark-gold};
+      --footer-background: #{$footer-darktheme};
+      --border-turq: #{$border-turq-darkmode};
+    }
+  }
